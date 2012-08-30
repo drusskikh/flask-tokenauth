@@ -6,9 +6,10 @@ from werkzeug.local import LocalProxy
 
 class LoginManager(object):
     user_callback = None
+    login_view = None
 
-    def __init__(self, login_view):
-        self.login_view = login_view
+    def __init__(self, app):
+        self.init_app(app)
 
     def user_loader(self, callback):
         """Takes token, returns user object."""
@@ -54,6 +55,7 @@ def logout_user():
 class UserMixin(object):
 
     def get_id(self):
+        """Returns unicode object."""
         raise NotImplementedError()
 
     def login(self):
