@@ -8,8 +8,9 @@ class LoginManager(object):
     user_callback = None
     login_view = None
 
-    def __init__(self, app):
-        self.init_app(app)
+    def __init__(self, app=None):
+        if app is not None:
+            self.init_app(app)
 
     def user_loader(self, callback):
         """Takes token, returns user object."""
