@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(
-    name='Flask-Tokenauth',
+    name='Flask-TokenAuth',
     version='0.0.1',
     url='https://github.com/drusskikh/flask-tokenauth',
     license='MIT',
