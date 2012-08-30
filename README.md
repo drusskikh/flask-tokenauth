@@ -1,4 +1,4 @@
 flask-redislogin
 ================
 
-Extention fo Flask. Implements loging using Redis as token storage.
+Extention fo Flask. Implements token authentication with customizable token storage.
